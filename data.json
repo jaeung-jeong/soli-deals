@@ -1,9 +1,20 @@
 {
- "updatedAt": "2026-10-03T23:34:41+00:00",
+ "updatedAt": "2026-10-03T23:42:41+00:00",
  "mode": "day",
  "day": "2026-10-04",
  "openChatUrl": "https://open.kakao.com/o/gx3BFAPi",
  "deals": [
+  {
+   "grade": "g5",
+   "name": "청우 계란과자, 40g, 24개",
+   "price": 13900,
+   "unit": "개당 579원 · 100g당 1,448원",
+   "at": "2026-10-03T23:41:41+00:00",
+   "url": "https://toss.shopping/_m/fKqCYzDn",
+   "sold": false,
+   "tag": "",
+   "image": "https://shopping.toss.im/live/temp/2026-08-11/30cdc86a-1b83-4453-b6d8-10e6202b16ce.jpeg"
+  },
   {
    "grade": "g5",
    "name": "종가 총각김치, 850g, 2개",
