@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>솔이의 오늘 특가</title>
-<meta name="description" content="오늘 0개 · 아직 살 수 있는 딜 0개 · 품절되면 바로 표시">
+<meta name="description" content="밤 12시 재입고 확인 · 어제 딜 31개 · 품절템 3개">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="솔이의 오늘 특가">
 <meta property="og:title" content="솔이의 오늘 특가">
-<meta property="og:description" content="오늘 0개 · 아직 살 수 있는 딜 0개 · 품절되면 바로 표시">
+<meta property="og:description" content="밤 12시 재입고 확인 · 어제 딜 31개 · 품절템 3개">
 <meta property="og:image" content="https://jaeung-jeong.github.io/soli-deals/og-20261004.png">
 <meta property="og:image:width" content="800">
 <meta property="og:image:height" content="400">
@@ -115,7 +115,7 @@ const GRADES = {
 const ORDER = {g5: 0, g4: 1, g3: 2, g0: 3, g2: 4};
 // 미리보기용 예시(공개 사이트에서는 쓰지 않는다)
 const SAMPLE = {
-  updatedAt: "2026-10-04T10:12:00+09:00", mode: "day", openChatUrl: "https://open.kakao.com/o/gCYJv6Oi",
+  updatedAt: "2026-10-04T10:12:00+09:00", mode: "day", openChatUrl: "https://open.kakao.com/o/gx3BFAPi",
   picks: [],
   deals: [
     {grade: "g5", name: "한예지 3겹 데코 화장지 30롤 2팩", price: 12800, unit: "롤당 213원", at: "2026-10-04T08:03:00+09:00", url: "#", sold: false, tag: ""},
@@ -170,10 +170,20 @@ function render(data, isSample) {
 }
 
 const isPublic = /github\.io$/.test(location.hostname);
-fetch("data.json", {cache: "no-store"})
-  .then(r => r.ok ? r.json() : Promise.reject())
-  .then(d => render(d, false))
-  .catch(() => isPublic ? render({deals: [], picks: []}, false) : render(SAMPLE, true));
+// 최신 데이터는 GitHub 에서 바로 읽는다(Pages 캐시 최대 10분을 건너뜀). 안 되면 페이지와 같이 올라간 data.json
+const LIVE = "https://api.github.com/repos/jaeung-jeong/soli-deals/contents/data.json";
+let loaded = false;
+function load() {
+  return fetch(LIVE, {cache: "no-store", headers: {Accept: "application/vnd.github.raw+json"}})
+    .then(r => r.ok ? r.json() : Promise.reject())
+    .catch(() => fetch("data.json", {cache: "no-store"}).then(r => r.ok ? r.json() : Promise.reject()))
+    .then(d => { loaded = true; render(d, false); })
+    .catch(() => { if (!loaded) isPublic ? render({deals: [], picks: []}, false) : render(SAMPLE, true); });
+}
+load();
+// 열려 있는 동안 2분마다 새 데이터(방문자당 시간 30번 — GitHub 비로그인 한도 60 안)
+setInterval(() => { if (document.visibilityState === "visible" && isPublic) load(); }, 120000);
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible" && isPublic) load(); });
 </script>
 </body>
 </html>
