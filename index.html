@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>솔이의 오늘 특가</title>
-<meta name="description" content="밤 12시 재입고 확인 · 어제 딜 31개 · 품절템 3개">
+<meta name="description" content="밤 12시 재입고 확인 · 어제 딜 10개 · 품절템 3개">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="솔이의 오늘 특가">
 <meta property="og:title" content="솔이의 오늘 특가">
-<meta property="og:description" content="밤 12시 재입고 확인 · 어제 딜 31개 · 품절템 3개">
+<meta property="og:description" content="밤 12시 재입고 확인 · 어제 딜 10개 · 품절템 3개">
 <meta property="og:image" content="https://jaeung-jeong.github.io/soli-deals/og-20261004.png">
 <meta property="og:image:width" content="800">
 <meta property="og:image:height" content="400">
@@ -52,15 +52,6 @@ h2{font:400 19px/1.2 var(--f-display);margin:4px 0 0}
 .pick .info{min-width:0}
 .pick .fact{color:var(--g4);font-size:12.5px;font-weight:700}
 .pick a{text-decoration:none;font-weight:700;font-size:14px;color:var(--accent-ink);background:var(--g4);border-radius:10px;padding:9px 12px;white-space:nowrap}
-.filters{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
-.filters::-webkit-scrollbar{display:none}
-.chip{flex:none;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:7px 12px;
-  font:500 13.5px/1 var(--f-body);cursor:pointer;white-space:nowrap}
-.chip b{font-weight:700;color:var(--muted);margin-left:4px;font-variant-numeric:tabular-nums}
-.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.chip[aria-pressed="true"] b{color:var(--bg)}
-.chip:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-.chip.live{border-style:dashed}
 .count{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:8px;gap:8px;flex-wrap:wrap}
 .list{display:flex;flex-direction:column;gap:10px;margin:0;padding:0;list-style:none}
 .deal{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;
@@ -107,7 +98,6 @@ footer{font-size:12px;color:var(--muted);display:flex;flex-direction:column;gap:
     <div id="pickList"></div>
   </section>
 
-  <div class="filters" id="filters" role="toolbar" aria-label="등급별로 보기"></div>
   <div class="count"><span id="count"></span><span id="updated"></span></div>
   <p class="sample" id="sampleNote" hidden>미리보기 예시 데이터예요</p>
   <ul class="list" id="list"></ul>
@@ -139,30 +129,7 @@ const hhmm = iso => new Date(iso).toLocaleTimeString("ko-KR", {hour: "2-digit", 
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
 const safeUrl = u => /^https:\/\//.test(u || "") ? u : "#";
 
-let DATA = null, IS_SAMPLE = false;
-const VIEW = {grade: "all", liveOnly: false};
-try { const v = JSON.parse(localStorage.getItem("soli-view") || "{}"); if (v.grade) VIEW.grade = v.grade; VIEW.liveOnly = !!v.liveOnly; } catch (e) {}
-function saveView() { try { localStorage.setItem("soli-view", JSON.stringify(VIEW)); } catch (e) {} }
-
-function renderFilters(deals) {
-  const counts = {};
-  deals.forEach(d => { const k = GRADES[d.grade] ? d.grade : "g2"; counts[k] = (counts[k] || 0) + 1; });
-  if (VIEW.grade !== "all" && !counts[VIEW.grade]) VIEW.grade = "all";
-  const chips = [["all", "전체", deals.length], ...Object.keys(ORDER).filter(k => counts[k]).map(k => [k, GRADES[k], counts[k]])];
-  const live = deals.filter(d => !d.sold).length;
-  const box = document.getElementById("filters");
-  box.innerHTML = chips.map(([k, label, n]) =>
-      `<button type="button" class="chip" data-grade="${k}" aria-pressed="${VIEW.grade === k}">${esc(label)}<b>${n}</b></button>`).join("")
-    + `<button type="button" class="chip live" data-live="1" aria-pressed="${VIEW.liveOnly}">살 수 있는 것만<b>${live}</b></button>`;
-  box.querySelectorAll("button").forEach(b => b.addEventListener("click", () => {
-    if (b.dataset.live) VIEW.liveOnly = !VIEW.liveOnly; else VIEW.grade = b.dataset.grade;
-    saveView();
-    render(DATA, IS_SAMPLE);
-  }));
-}
-
 function render(data, isSample) {
-  DATA = data; IS_SAMPLE = isSample;
   document.getElementById("sampleNote").hidden = !isSample;
   const night = data.mode === "night";
   document.getElementById("date").textContent = new Date().toLocaleDateString("ko-KR", {month: "long", day: "numeric", weekday: "short", timeZone: "Asia/Seoul"});
@@ -180,18 +147,11 @@ function render(data, isSample) {
   document.getElementById("count").textContent = `${night ? "어제" : "오늘"} ${deals.length}개 · 아직 살 수 있는 딜 ${live}개`;
   document.getElementById("updated").textContent = data.updatedAt ? `${hhmm(data.updatedAt)} 업데이트` : "";
   const list = document.getElementById("list");
-  document.getElementById("filters").hidden = !deals.length;
-  if (deals.length) renderFilters(deals);
-  const shown = deals.filter(d => (VIEW.grade === "all" || (GRADES[d.grade] ? d.grade : "g2") === VIEW.grade) && (!VIEW.liveOnly || !d.sold));
-  if (deals.length && !shown.length) {
-    list.innerHTML = `<li class="empty">이 조건에 맞는 딜이 없어요. '전체'를 눌러 보세요.</li>`;
-    return;
-  }
   if (!deals.length) {
     list.innerHTML = `<li class="empty">오늘 딜은 아침 8시부터 올라와요.<br>카톡방에 들어오면 올라오는 순간 받아볼 수 있어요.</li>`;
     return;
   }
-  list.innerHTML = shown.map(d => {
+  list.innerHTML = deals.map(d => {
     const key = GRADES[d.grade] ? d.grade : "g2";
     return `<li class="deal ${key}${d.sold ? " sold" : ""}">
       <div class="top">
