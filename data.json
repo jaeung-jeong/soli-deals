@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-03T16:33:23+00:00",
+ "updatedAt": "2026-10-03T18:56:23+00:00",
  "mode": "night",
  "day": "2026-10-03",
  "openChatUrl": "https://open.kakao.com/o/gx3BFAPi",
@@ -192,26 +192,6 @@
    "at": "2026-10-03T00:23:30+00:00",
    "url": "https://toss.shopping/_m/9m9x1qg2",
    "sold": false,
-   "tag": ""
-  },
-  {
-   "grade": "g2",
-   "name": "수뜰리에 퍼퓸 고체 탈취제, 밤쉘향, 310g, 2개",
-   "price": 6930,
-   "unit": "개당 3,465원 · 100g당 1,118원",
-   "at": "2026-10-03T00:12:50+00:00",
-   "url": "https://toss.shopping/_m/ZQHrOS2b",
-   "sold": true,
-   "tag": "재입고"
-  },
-  {
-   "grade": "g0",
-   "name": "한예지 가든 플라워 3겹 천연펄프 화장지, 30m, 30롤, 2팩",
-   "price": 12800,
-   "unit": "",
-   "at": "2026-10-03T00:01:25+00:00",
-   "url": "https://toss.shopping/_m/VVXinGu2",
-   "sold": true,
    "tag": ""
   },
   {
