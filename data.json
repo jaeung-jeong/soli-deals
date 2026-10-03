@@ -1,9 +1,20 @@
 {
- "updatedAt": "2026-10-03T23:42:41+00:00",
+ "updatedAt": "2026-10-03T23:51:09+00:00",
  "mode": "day",
  "day": "2026-10-04",
  "openChatUrl": "https://open.kakao.com/o/gx3BFAPi",
  "deals": [
+  {
+   "grade": "g5",
+   "name": "프로쉬 그린레몬 식기세척기 세제 미니, 9g, 50개입, 4박스",
+   "price": 45900,
+   "unit": "",
+   "at": "2026-10-03T23:50:09+00:00",
+   "url": "https://toss.shopping/_m/doC7JiFu",
+   "sold": false,
+   "tag": "",
+   "image": "https://shopping.toss.im/live/taca/ai/ZTIxZDlm/QU0zWjJadWJiSk16TWxtV3pCbWNMYk5zMnlOczVtUk0yYmJNMXVTM0pyTXk.png"
+  },
   {
    "grade": "g5",
    "name": "청우 계란과자, 40g, 24개",
