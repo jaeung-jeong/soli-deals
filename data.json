@@ -1,9 +1,20 @@
 {
- "updatedAt": "2026-10-03T23:11:41+00:00",
+ "updatedAt": "2026-10-03T23:14:41+00:00",
  "mode": "day",
  "day": "2026-10-04",
  "openChatUrl": "https://open.kakao.com/o/gx3BFAPi",
  "deals": [
+  {
+   "grade": "g5",
+   "name": "리벤스 로얄플러스 물티슈, 캡형, 70매, 10팩",
+   "price": 10800,
+   "unit": "",
+   "at": "2026-10-03T23:13:41+00:00",
+   "url": "https://toss.shopping/_m/FDhKrIUp",
+   "sold": false,
+   "tag": "",
+   "image": null
+  },
   {
    "grade": "g5",
    "name": "사리원 소불고기, 500g, 4팩",
