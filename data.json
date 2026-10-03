@@ -1,9 +1,199 @@
 {
- "updatedAt": "2026-10-03T16:22:17+00:00",
+ "updatedAt": "2026-10-03T16:23:17+00:00",
  "mode": "night",
  "day": "2026-10-03",
  "openChatUrl": "https://open.kakao.com/o/gx3BFAPi",
  "deals": [
+  {
+   "grade": "g2",
+   "name": "대한다업 순수 호박팥차, 1.5g, 100개입, 1개",
+   "price": 6440,
+   "unit": "",
+   "at": "2026-10-03T04:03:56+00:00",
+   "url": "https://toss.shopping/_m/Xsmu19o4",
+   "sold": false,
+   "tag": ""
+  },
+  {
+   "grade": "g0",
+   "name": "와이니즈 질레트 호환용 5중 면도날 면도기 세트, 스윙면도기 1개 + 면도날 32개입, 1세트",
+   "price": 17557,
+   "unit": "",
+   "at": "2026-10-03T03:53:56+00:00",
+   "url": "https://toss.shopping/_m/PPSYcspc",
+   "sold": false,
+   "tag": ""
+  },
+  {
+   "grade": "g2",
+   "name": "필립스 무선 블루투스 이어폰, TAT1108, 블랙, 1개",
+   "price": 19900,
+   "unit": "",
+   "at": "2026-10-03T03:43:56+00:00",
+   "url": "https://toss.shopping/_m/VC3KazBy",
+   "sold": false,
+   "tag": ""
+  },
+  {
+   "grade": "g2",
+   "name": "모노케어 3구개별 안전커버 멀티탭, 화이트, 1.5m, 1개",
+   "price": 5530,
+   "unit": "",
+   "at": "2026-10-03T03:34:25+00:00",
+   "url": "https://toss.shopping/_m/3dErwV9x",
+   "sold": false,
+   "tag": ""
+  },
+  {
+   "grade": "g2",
+   "name": "헬로우 그린 국내산 솔잎분말, 200g, 1개",
+   "price": 6070,
+   "unit": "100g당 3,035원",
+   "at": "2026-10-03T03:25:25+00:00",
+   "url": "https://toss.shopping/_m/nXfqVyVk",
+   "sold": false,
+   "tag": ""
+  },
+  {
+   "grade": "g3",
+   "name": "홍로 세척사과, 16-25과 내외, 3kg, 1박스",
+   "price": 11800,
+   "unit": "100g당 393원",
+   "at": "2026-10-03T03:15:25+00:00",
+   "url": "https://toss.shopping/_m/PhUeKnWb",
+   "sold": false,
+   "tag": ""
+  },
+  {
+   "grade": "g2",
+   "name": "맛팜 신 곱창볶음, 250g, 2개",
+   "price": 6600,
+   "unit": "개당 3,300원 · 100g당 1,320원",
+   "at": "2026-10-03T03:04:25+00:00",
+   "url": "https://toss.shopping/_m/B9CMn9Zu",
+   "sold": false,
+   "tag": ""
+  },
+  {
+   "grade": "g2",
+   "name": "맛꾼 메추리알 장조림, 1kg, 2개",
+   "price": 8900,
+   "unit": "개당 4,450원 · 100g당 445원",
+   "at": "2026-10-03T02:53:25+00:00",
+   "url": "https://toss.shopping/_m/VAlwiCRa",
+   "sold": false,
+   "tag": ""
+  },
+  {
+   "grade": "g2",
+   "name": "수뜰리에 섬유유연제 소프트 비누향, 2.5L, 4개",
+   "price": 8900,
+   "unit": "개당 2,225원 · 100ml당 89원",
+   "at": "2026-10-03T02:42:25+00:00",
+   "url": "https://toss.shopping/_m/XWRDFGDn",
+   "sold": false,
+   "tag": ""
+  },
+  {
+   "grade": "g2",
+   "name": "레이데이 마데카 재생크림 1+1+1, 40ml, 총 3개",
+   "price": 9390,
+   "unit": "개당 3,130원 · 100ml당 7,825원",
+   "at": "2026-10-03T02:31:25+00:00",
+   "url": "https://toss.shopping/_m/HVt48stC",
+   "sold": false,
+   "tag": ""
+  },
+  {
+   "grade": "g0",
+   "name": "신흥클라스 스테인리스 쌀 세척볼, 26.8x24x13.5cm, 1개",
+   "price": 8811,
+   "unit": "",
+   "at": "2026-10-03T02:20:25+00:00",
+   "url": "https://toss.shopping/_m/h1YjTIOf",
+   "sold": false,
+   "tag": ""
+  },
+  {
+   "grade": "g2",
+   "name": "에브리워터 무라벨, 500ml, 40개",
+   "price": 7980,
+   "unit": "개당 200원 · 100ml당 40원",
+   "at": "2026-10-03T02:02:25+00:00",
+   "url": "https://toss.shopping/_m/1jUFZJbh",
+   "sold": false,
+   "tag": ""
+  },
+  {
+   "grade": "g2",
+   "name": "이지앤프리 블랙 에디션 김치통, 블랙, 3.2L, 2통",
+   "price": 4800,
+   "unit": "100ml당 150원",
+   "at": "2026-10-03T01:51:25+00:00",
+   "url": "https://toss.shopping/_m/R9RZk5d2",
+   "sold": false,
+   "tag": ""
+  },
+  {
+   "grade": "g2",
+   "name": "제주 맑은콩나물, 무농약, 300g, 1개",
+   "price": 100,
+   "unit": "100g당 33원",
+   "at": "2026-10-03T01:33:11+00:00",
+   "url": "https://toss.shopping/_m/bCdZDZHy",
+   "sold": false,
+   "tag": ""
+  },
+  {
+   "grade": "g2",
+   "name": "이지앤프리 에어클립 프레시 밀폐용기 체험팩, 레몬, 5종, 7P, 1세트",
+   "price": 7590,
+   "unit": "",
+   "at": "2026-10-03T01:24:11+00:00",
+   "url": "https://toss.shopping/_m/HzxdiYwy",
+   "sold": false,
+   "tag": ""
+  },
+  {
+   "grade": "g2",
+   "name": "던킨 미니도넛, 딸기 듬뿍 250g 1팩 + 바바리안 250g 1팩 + 글레이즈드 135g 1팩, 3팩",
+   "price": 11500,
+   "unit": "100g당 2,840원",
+   "at": "2026-10-03T01:03:55+00:00",
+   "url": "https://toss.shopping/_m/JRUN79Jd",
+   "sold": false,
+   "tag": ""
+  },
+  {
+   "grade": "g2",
+   "name": "모나리자 에코 미용티슈, 300매, 12입, 1박스",
+   "price": 10990,
+   "unit": "",
+   "at": "2026-10-03T00:54:56+00:00",
+   "url": "https://toss.shopping/_m/XWnCK2bw",
+   "sold": false,
+   "tag": ""
+  },
+  {
+   "grade": "g2",
+   "name": "이선별 밀크카스테라, 1kg, 1박스",
+   "price": 6900,
+   "unit": "100g당 690원",
+   "at": "2026-10-03T00:34:22+00:00",
+   "url": "https://toss.shopping/_m/jHDpQZcq",
+   "sold": false,
+   "tag": ""
+  },
+  {
+   "grade": "g0",
+   "name": "블루레오 음파 전동칫솔, B200, 93g, 화이트, 1개",
+   "price": 10000,
+   "unit": "",
+   "at": "2026-10-03T00:23:30+00:00",
+   "url": "https://toss.shopping/_m/9m9x1qg2",
+   "sold": false,
+   "tag": ""
+  },
   {
    "grade": "g2",
    "name": "수뜰리에 퍼퓸 고체 탈취제, 밤쉘향, 310g, 2개",
@@ -56,6 +246,16 @@
   },
   {
    "grade": "g5",
+   "name": "생활소품 일회용 위생수세미, 그레이, 60매, 4개",
+   "price": 9800,
+   "unit": "개당 2,450원",
+   "at": "2026-10-02T23:02:36+00:00",
+   "url": "https://toss.shopping/_m/hU1oLKYu",
+   "sold": false,
+   "tag": ""
+  },
+  {
+   "grade": "g5",
    "name": "하이뮨 프로틴 밸런스 액티브 제로, 밤티라미수, 250ml, 18개",
    "price": 19900,
    "unit": "개당 1,106원 · 100ml당 442원",
@@ -71,6 +271,16 @@
    "unit": "개당 4,975원 · 100g당 995원",
    "at": "2026-10-02T23:02:19+00:00",
    "url": "https://toss.shopping/_m/V0NwIZFz",
+   "sold": false,
+   "tag": ""
+  },
+  {
+   "grade": "g5",
+   "name": "쿠잉 베이직 물티슈, 캡형, 100매, 20팩",
+   "price": 8330,
+   "unit": "",
+   "at": "2026-10-02T23:02:10+00:00",
+   "url": "https://toss.shopping/_m/h9RHpmFz",
    "sold": false,
    "tag": ""
   },
