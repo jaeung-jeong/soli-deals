@@ -1,9 +1,20 @@
 {
- "updatedAt": "2026-10-03T23:27:41+00:00",
+ "updatedAt": "2026-10-03T23:34:41+00:00",
  "mode": "day",
  "day": "2026-10-04",
  "openChatUrl": "https://open.kakao.com/o/gx3BFAPi",
  "deals": [
+  {
+   "grade": "g5",
+   "name": "종가 총각김치, 850g, 2개",
+   "price": 16900,
+   "unit": "개당 8,450원 · 100g당 994원",
+   "at": "2026-10-03T23:33:41+00:00",
+   "url": "https://toss.shopping/_m/jnSgHqzj",
+   "sold": false,
+   "tag": "",
+   "image": "https://shopping.toss.im/live/taca/ai/ZTJjYTI4/QUo3VUR1bHM1ZHlUdHpPejB1bk5MSzhmR2taazhuaGF2VTFrcVhOUTZCYWU.png"
+  },
   {
    "grade": "g5",
    "name": "모두의국밥 얼큰우거지 뼈해장국 감자탕, 1kg, 3개",
