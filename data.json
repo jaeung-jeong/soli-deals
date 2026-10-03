@@ -1,9 +1,20 @@
 {
- "updatedAt": "2026-10-03T23:14:41+00:00",
+ "updatedAt": "2026-10-03T23:16:41+00:00",
  "mode": "day",
  "day": "2026-10-04",
  "openChatUrl": "https://open.kakao.com/o/gx3BFAPi",
  "deals": [
+  {
+   "grade": "g5",
+   "name": "전통압착 통참기름, 350ml, 2개",
+   "price": 13400,
+   "unit": "개당 6,700원 · 100ml당 1,914원",
+   "at": "2026-10-03T23:15:41+00:00",
+   "url": "https://toss.shopping/_m/BXAhhWSD",
+   "sold": false,
+   "tag": "",
+   "image": null
+  },
   {
    "grade": "g5",
    "name": "리벤스 로얄플러스 물티슈, 캡형, 70매, 10팩",
