@@ -1,9 +1,20 @@
 {
- "updatedAt": "2026-10-03T23:17:41+00:00",
+ "updatedAt": "2026-10-03T23:24:41+00:00",
  "mode": "day",
  "day": "2026-10-04",
  "openChatUrl": "https://open.kakao.com/o/gx3BFAPi",
  "deals": [
+  {
+   "grade": "g5",
+   "name": "모두의국밥 얼큰우거지 뼈해장국 감자탕, 1kg, 3개",
+   "price": 15470,
+   "unit": "개당 5,157원 · 100g당 516원",
+   "at": "2026-10-03T23:23:42+00:00",
+   "url": "https://toss.shopping/_m/taEmjOpo",
+   "sold": false,
+   "tag": "",
+   "image": "https://shopping.toss.im/live/temp/2026-07-29/47027462-4b40-4654-8c58-58eb4d165ad5.png"
+  },
   {
    "grade": "g5",
    "name": "전통압착 통참기름, 350ml, 2개",
