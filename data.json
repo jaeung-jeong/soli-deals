@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-03T23:16:41+00:00",
+ "updatedAt": "2026-10-03T23:17:41+00:00",
  "mode": "day",
  "day": "2026-10-04",
  "openChatUrl": "https://open.kakao.com/o/gx3BFAPi",
@@ -13,7 +13,7 @@
    "url": "https://toss.shopping/_m/BXAhhWSD",
    "sold": false,
    "tag": "",
-   "image": null
+   "image": "https://shopping.toss.im/live/taca/ai/YjAxMjNm/V3BEakdhVmovc2ZoWXd4bDFML3puaHZRRCtIa0x6NGU1U3Z6M2h1VUgyRT0.png"
   },
   {
    "grade": "g5",
@@ -24,7 +24,7 @@
    "url": "https://toss.shopping/_m/FDhKrIUp",
    "sold": false,
    "tag": "",
-   "image": null
+   "image": "https://shopping.toss.im/live/taca/ai/ZDdjNzBj/TDJXKys3VE9kLy9hM3YrL3l0UC96NkY3M3Y0M0lXbjdKNkcyODFyVS8rMD0.png"
   },
   {
    "grade": "g5",
@@ -35,7 +35,7 @@
    "url": "https://toss.shopping/_m/VF5kIo7q",
    "sold": false,
    "tag": "",
-   "image": null
+   "image": "https://shopping.toss.im/live/taca/ai/MDVkNWU3/QU9uMEFXT0h1WUhHdjlEeHJCNUFRNlg5WUlleDhDSWZBV1BDQ0QvT0R2UGk.png"
   }
  ],
  "picks": []
