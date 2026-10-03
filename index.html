@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>솔이의 오늘 특가</title>
-<meta name="description" content="밤 12시 재입고 확인 · 어제 딜 31개 · 품절템 3개">
+<meta name="description" content="밤 12시 재입고 확인 · 어제 딜 29개 · 품절템 3개">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="솔이의 오늘 특가">
 <meta property="og:title" content="솔이의 오늘 특가">
-<meta property="og:description" content="밤 12시 재입고 확인 · 어제 딜 31개 · 품절템 3개">
+<meta property="og:description" content="밤 12시 재입고 확인 · 어제 딜 29개 · 품절템 3개">
 <meta property="og:image" content="https://jaeung-jeong.github.io/soli-deals/og-20261004.png">
 <meta property="og:image:width" content="800">
 <meta property="og:image:height" content="400">
@@ -48,6 +48,7 @@ h2{font:400 19px/1.2 var(--f-display);margin:4px 0 0}
 .legend b{font-weight:700}
 .l5 b{color:var(--g5)} .l4 b{color:var(--g4)} .l3 b{color:var(--g3)} .l0 b{color:var(--g0)}
 .picks{background:var(--card);border:1.5px solid var(--g4);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:10px}
+.pick{display:flex;justify-content:space-between;align-items:center;gap:10px}
 .pick .info{min-width:0}
 .pick .fact{color:var(--g4);font-size:12.5px;font-weight:700}
 .pick a{text-decoration:none;font-weight:700;font-size:14px;color:var(--accent-ink);background:var(--g4);border-radius:10px;padding:9px 12px;white-space:nowrap}
@@ -64,15 +65,6 @@ h2{font:400 19px/1.2 var(--f-display);margin:4px 0 0}
 .list{display:flex;flex-direction:column;gap:10px;margin:0;padding:0;list-style:none}
 .deal{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;
   grid-template-columns:1fr auto;gap:6px 12px;align-items:center}
-.deal.has-img{grid-template-columns:auto 1fr auto}
-.thumb{width:64px;height:64px;border-radius:10px;object-fit:cover;background:var(--line);flex:none}
-.pick .thumb{width:48px;height:48px}
-.pick{display:grid;grid-template-columns:1fr auto;gap:8px 10px;align-items:center}
-.pick.has-img{grid-template-columns:auto 1fr auto}
-.stock{font-size:12px;font-weight:700;border-radius:6px;padding:2px 7px;display:inline-block;margin-top:2px}
-.stock.in{background:#d3f9d8;color:#2b8a3e} .stock.out{background:var(--line);color:var(--muted)}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .stock.in{background:#1e4d2b;color:#8ce99a}}
-:root[data-theme="dark"] .stock.in{background:#1e4d2b;color:#8ce99a}
 .deal .top{grid-column:1/-1;display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted);flex-wrap:wrap}
 .grade{font:400 14px/1 var(--f-display);padding:4px 8px;border-radius:6px;color:#fff;letter-spacing:.3px}
 .g5 .grade{background:var(--g5)} .g4 .grade{background:var(--g4)} .g3 .grade{background:var(--g3)} .g0 .grade{background:var(--g0)} .g2 .grade{background:var(--g2)}
@@ -180,14 +172,9 @@ function render(data, isSample) {
   if (data.openChatUrl) document.getElementById("join").href = safeUrl(data.openChatUrl);
   const picks = data.picks || [];
   document.getElementById("picks").hidden = !picks.length;
-  document.getElementById("pickList").innerHTML = picks.map(p => {
-    const img = safeUrl(p.image) !== "#" ? `<img class="thumb" src="${esc(p.image)}" alt="" loading="lazy">` : "";
-    const stock = p.in_stock === true ? `<span class="stock in">✅ 지금 재입고됨 (${hhmm(p.checked_at)} 확인)</span>`
-                : p.in_stock === false ? `<span class="stock out">품절 중 (${hhmm(p.checked_at)} 확인)</span>` : "";
-    return `<div class="pick${img ? " has-img" : ""}">${img}
-      <div class="info"><span class="name">${esc(p.name)}</span>${p.fact ? `<span class="fact">${esc(p.fact)}</span>` : ""}${stock}</div>
-      <a href="${esc(safeUrl(p.url))}" target="_blank" rel="noopener">${p.in_stock ? "지금 사러 가기" : "재입고 확인"}</a></div>`;
-  }).join("");
+  document.getElementById("pickList").innerHTML = picks.map(p => `<div class="pick">
+      <div class="info"><span class="name">${esc(p.name)}</span>${p.fact ? `<span class="fact">${esc(p.fact)}</span>` : ""}</div>
+      <a href="${esc(safeUrl(p.url))}" target="_blank" rel="noopener">재입고 확인</a></div>`).join("");
   const deals = [...(data.deals || [])].sort((a, b) => (a.sold - b.sold) || ((ORDER[a.grade] ?? 9) - (ORDER[b.grade] ?? 9)) || (b.at < a.at ? -1 : 1));
   const live = deals.filter(d => !d.sold).length;
   document.getElementById("count").textContent = `${night ? "어제" : "오늘"} ${deals.length}개 · 아직 살 수 있는 딜 ${live}개`;
@@ -206,15 +193,13 @@ function render(data, isSample) {
   }
   list.innerHTML = shown.map(d => {
     const key = GRADES[d.grade] ? d.grade : "g2";
-    const img = safeUrl(d.image) !== "#" ? `<img class="thumb" src="${esc(d.image)}" alt="" loading="lazy">` : "";
-    return `<li class="deal ${key}${d.sold ? " sold" : ""}${img ? " has-img" : ""}">
+    return `<li class="deal ${key}${d.sold ? " sold" : ""}">
       <div class="top">
         <span class="grade">${esc(GRADES[key])}</span>
         ${d.tag ? `<span class="tag">${esc(d.tag)}</span>` : ""}
         <span>${hhmm(d.at)} 올림</span>
         ${d.sold ? `<span class="soldmark">❌ 품절</span>` : ""}
       </div>
-      ${img}
       <div class="info">
         <span class="name">${esc(d.name)}</span>
         <span class="price">${won(d.price)}${d.unit ? `<span class="unit">${esc(d.unit)}</span>` : ""}</span>
