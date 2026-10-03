@@ -1,8 +1,53 @@
 {
- "updatedAt": "2026-10-03T23:26:41+00:00",
+ "updatedAt": "2026-10-03T23:27:41+00:00",
  "mode": "day",
  "day": "2026-10-04",
  "openChatUrl": "https://open.kakao.com/o/gx3BFAPi",
- "deals": [],
+ "deals": [
+  {
+   "grade": "g5",
+   "name": "모두의국밥 얼큰우거지 뼈해장국 감자탕, 1kg, 3개",
+   "price": 15470,
+   "unit": "개당 5,157원 · 100g당 516원",
+   "at": "2026-10-03T23:23:42+00:00",
+   "url": "https://toss.shopping/_m/taEmjOpo",
+   "sold": false,
+   "tag": "",
+   "image": "https://shopping.toss.im/live/temp/2026-07-29/47027462-4b40-4654-8c58-58eb4d165ad5.png"
+  },
+  {
+   "grade": "g5",
+   "name": "전통압착 통참기름, 350ml, 2개",
+   "price": 13400,
+   "unit": "개당 6,700원 · 100ml당 1,914원",
+   "at": "2026-10-03T23:15:41+00:00",
+   "url": "https://toss.shopping/_m/BXAhhWSD",
+   "sold": false,
+   "tag": "",
+   "image": "https://shopping.toss.im/live/taca/ai/YjAxMjNm/V3BEakdhVmovc2ZoWXd4bDFML3puaHZRRCtIa0x6NGU1U3Z6M2h1VUgyRT0.png"
+  },
+  {
+   "grade": "g5",
+   "name": "리벤스 로얄플러스 물티슈, 캡형, 70매, 10팩",
+   "price": 10800,
+   "unit": "",
+   "at": "2026-10-03T23:13:41+00:00",
+   "url": "https://toss.shopping/_m/FDhKrIUp",
+   "sold": false,
+   "tag": "",
+   "image": "https://shopping.toss.im/live/taca/ai/ZDdjNzBj/TDJXKys3VE9kLy9hM3YrL3l0UC96NkY3M3Y0M0lXbjdKNkcyODFyVS8rMD0.png"
+  },
+  {
+   "grade": "g5",
+   "name": "사리원 소불고기, 500g, 4팩",
+   "price": 17900,
+   "unit": "100g당 895원",
+   "at": "2026-10-03T23:05:56+00:00",
+   "url": "https://toss.shopping/_m/VF5kIo7q",
+   "sold": false,
+   "tag": "",
+   "image": "https://shopping.toss.im/live/taca/ai/MDVkNWU3/QU9uMEFXT0h1WUhHdjlEeHJCNUFRNlg5WUlleDhDSWZBV1BDQ0QvT0R2UGk.png"
+  }
+ ],
  "picks": []
 }
