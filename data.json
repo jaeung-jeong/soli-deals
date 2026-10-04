@@ -1,9 +1,20 @@
 {
- "updatedAt": "2026-10-04T01:37:13+00:00",
+ "updatedAt": "2026-10-04T01:51:13+00:00",
  "mode": "day",
  "day": "2026-10-04",
  "openChatUrl": "https://open.kakao.com/o/gx3BFAPi",
  "deals": [
+  {
+   "grade": "g2",
+   "name": "제주 서귀포 감귤, 12brix 초고당도, 5kg, 1박스",
+   "price": 13900,
+   "unit": "100g당 278원",
+   "at": "2026-10-04T01:50:13+00:00",
+   "url": "https://toss.shopping/_m/3C5Cy8Uv",
+   "sold": false,
+   "tag": "",
+   "image": "thumbs/125.jpg"
+  },
   {
    "grade": "g0",
    "name": "상쾌한 아침 우유식빵, 300g, 1개",
