@@ -1,9 +1,20 @@
 {
- "updatedAt": "2026-10-04T00:56:13+00:00",
+ "updatedAt": "2026-10-04T01:21:13+00:00",
  "mode": "day",
  "day": "2026-10-04",
  "openChatUrl": "https://open.kakao.com/o/gx3BFAPi",
  "deals": [
+  {
+   "grade": "g2",
+   "name": "윌로펫 말랑육즙 강아지 소프트사료, 면역/항산화, 1.2kg, 1개",
+   "price": 8000,
+   "unit": "100g당 667원",
+   "at": "2026-10-04T01:20:13+00:00",
+   "url": "https://toss.shopping/_m/9qH8sBVu",
+   "sold": false,
+   "tag": "",
+   "image": "thumbs/140.jpg"
+  },
   {
    "grade": "g2",
    "name": "프로프룻 국내산 햇배, 대과, 개별망포장, 5kg, 1박스",
