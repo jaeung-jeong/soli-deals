@@ -1,9 +1,20 @@
 {
- "updatedAt": "2026-10-04T02:36:13+00:00",
+ "updatedAt": "2026-10-04T02:51:13+00:00",
  "mode": "day",
  "day": "2026-10-04",
  "openChatUrl": "https://open.kakao.com/o/gx3BFAPi",
  "deals": [
+  {
+   "grade": "g2",
+   "name": "동국제약 파워맥스 쏘팔메토 골드, 1000mg, 30캡슐, 2박스",
+   "price": 15900,
+   "unit": "",
+   "at": "2026-10-04T02:50:13+00:00",
+   "url": "https://toss.shopping/_m/RJ6QLnOu",
+   "sold": false,
+   "tag": "",
+   "image": "thumbs/1670.jpg"
+  },
   {
    "grade": "g0",
    "name": "올바른 슈퍼 프로바이오틱스 생유산균 19 비타민D, 30포, 2박스",
