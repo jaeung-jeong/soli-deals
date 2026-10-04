@@ -1,9 +1,20 @@
 {
- "updatedAt": "2026-10-04T00:07:09+00:00",
+ "updatedAt": "2026-10-04T00:09:09+00:00",
  "mode": "day",
  "day": "2026-10-04",
  "openChatUrl": "https://open.kakao.com/o/gx3BFAPi",
  "deals": [
+  {
+   "grade": "g5",
+   "name": "웅진식품 가야G워터 생수 무라벨, 2L, 24개",
+   "price": 10400,
+   "unit": "개당 433원 · 100ml당 22원",
+   "at": "2026-10-04T00:08:09+00:00",
+   "url": "https://toss.shopping/_m/biulPkRD",
+   "sold": false,
+   "tag": "",
+   "image": "https://shopping.toss.im/live/taca/ai/ZDYzMmU4/QU9EeEdvNFNrVWdudUxRcUk1SE1tVUM2Ty9yR2ZmUm40MlRXVkNOVnF3MTQ.png"
+  },
   {
    "grade": "g5",
    "name": "예진원 국내산 ABC주스, 80ml, 35개",
