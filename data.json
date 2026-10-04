@@ -1,9 +1,20 @@
 {
- "updatedAt": "2026-10-04T01:21:13+00:00",
+ "updatedAt": "2026-10-04T01:37:13+00:00",
  "mode": "day",
  "day": "2026-10-04",
  "openChatUrl": "https://open.kakao.com/o/gx3BFAPi",
  "deals": [
+  {
+   "grade": "g0",
+   "name": "상쾌한 아침 우유식빵, 300g, 1개",
+   "price": 1000,
+   "unit": "100g당 333원",
+   "at": "2026-10-04T01:36:18+00:00",
+   "url": "https://toss.shopping/_m/LgqT5mIj",
+   "sold": false,
+   "tag": "",
+   "image": "thumbs/1716.jpg"
+  },
   {
    "grade": "g2",
    "name": "윌로펫 말랑육즙 강아지 소프트사료, 면역/항산화, 1.2kg, 1개",
