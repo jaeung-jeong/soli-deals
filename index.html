@@ -146,6 +146,7 @@ const won = n => Number(n).toLocaleString("ko-KR") + "원";
 const hhmm = iso => new Date(iso).toLocaleTimeString("ko-KR", {hour: "2-digit", minute: "2-digit", hour12: false, timeZone: "Asia/Seoul"});
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
 const safeUrl = u => /^https:\/\//.test(u || "") ? u : "#";
+const safeImg = u => (/^https:\/\//.test(u || "") || /^thumbs\/\d+\.jpg$/.test(u || "")) ? u : null;   // 봇이 만든 160px 썸네일(thumbs/…) 또는 https
 
 let DATA = null, IS_SAMPLE = false;
 const VIEW = {grade: "all", liveOnly: false};
@@ -181,7 +182,7 @@ function render(data, isSample) {
   const picks = data.picks || [];
   document.getElementById("picks").hidden = !picks.length;
   document.getElementById("pickList").innerHTML = picks.map(p => {
-    const img = safeUrl(p.image) !== "#" ? `<img class="thumb" src="${esc(p.image)}" alt="" loading="lazy">` : "";
+    const img = safeImg(p.image) ? `<img class="thumb" src="${esc(p.image)}" alt="" loading="lazy" decoding="async">` : "";
     const stock = p.in_stock === true ? `<span class="stock in">✅ 지금 재입고됨 (${hhmm(p.checked_at)} 확인)</span>`
                 : p.in_stock === false ? `<span class="stock out">품절 중 (${hhmm(p.checked_at)} 확인)</span>` : "";
     return `<div class="pick${img ? " has-img" : ""}">${img}
@@ -206,7 +207,7 @@ function render(data, isSample) {
   }
   list.innerHTML = shown.map(d => {
     const key = GRADES[d.grade] ? d.grade : "g2";
-    const img = safeUrl(d.image) !== "#" ? `<img class="thumb" src="${esc(d.image)}" alt="" loading="lazy">` : "";
+    const img = safeImg(d.image) ? `<img class="thumb" src="${esc(d.image)}" alt="" loading="lazy" decoding="async">` : "";
     return `<li class="deal ${key}${d.sold ? " sold" : ""}${img ? " has-img" : ""}">
       <div class="top">
         <span class="grade">${esc(GRADES[key])}</span>
