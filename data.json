@@ -1,9 +1,20 @@
 {
- "updatedAt": "2026-10-04T00:09:09+00:00",
+ "updatedAt": "2026-10-04T00:20:09+00:00",
  "mode": "day",
  "day": "2026-10-04",
  "openChatUrl": "https://open.kakao.com/o/gx3BFAPi",
  "deals": [
+  {
+   "grade": "g2",
+   "name": "테팔 티타늄 인텐시브 블랙 프라이팬 5종 세트, 1세트",
+   "price": 58810,
+   "unit": "",
+   "at": "2026-10-04T00:19:09+00:00",
+   "url": "https://toss.shopping/_m/TgEqq5rB",
+   "sold": false,
+   "tag": "",
+   "image": "https://shopping.toss.im/live/taca/ai/ZjYyMmQx/QUp0c3M1azJ5V1p1VG1ZMDJXY3ptMnlhU2VXTXRteWVaMlRaeVNRNVBER1Q.png"
+  },
   {
    "grade": "g5",
    "name": "웅진식품 가야G워터 생수 무라벨, 2L, 24개",
